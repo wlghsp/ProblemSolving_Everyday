@@ -2,8 +2,8 @@
 
 def getTotalX(a, b):
     # 최대공약수
-    while
     # 최소공배수
+    None
 
 
 a = []
