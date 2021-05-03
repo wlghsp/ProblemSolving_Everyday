@@ -6,7 +6,12 @@ m = 2
 
 
 def birthday(s, d, m):
-    None
+    cnt = 0
+    for i in range(0, n-m+1):
+        if sum(s[i:i+m]) == d:
+            cnt += 1
+    return cnt
 
 
+n = 5
 print(birthday(s, d, m))
