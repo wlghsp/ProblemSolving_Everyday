@@ -1,6 +1,4 @@
-import sys
 
-input = sys.stdin.readline
 """ 
 1 10
 10 10 10 10 10
@@ -18,4 +16,12 @@ input = sys.stdin.readline
 각 기사에 적혀있는 참가자의 수의 차이
 
 """
+import sys
+
+input = sys.stdin.readline
 n, m = map(int, input().split())
+paperNums = list(map(int, input().split()))
+
+numOfParticipants = n * m
+
+print(*list(map(lambda s: s - numOfParticipants, paperNums)))
