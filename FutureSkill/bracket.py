@@ -5,17 +5,21 @@
 # True
 # False
 def open_and_close(sentence: str):  ## sentence = ((()
-    if len(sentence) == 0:
+    stack = []
+    for door in sentence:
+        if len(stack) == 0:
+            if door == "(":
+                stack.append(door)
+            else:
+                return False
+        elif door == "(":
+            stack.append(door)
+        elif door == ")":
+            stack.pop()
+    if len(stack) == 0:
         return True
-    sen_list = list(sentence)
-    top = sen_list[-1]
-    bottom = sen_list[0]
-    if bottom != top:
-        new_sen_list = sen_list[1:-1]
-        new_sen = "".join(new_sen_list)
-        return open_and_close(new_sen)
-    if bottom == top:
-        return False
+    return False
 
-str = "((()"
+
+str = ")))((("
 print(open_and_close(str))
