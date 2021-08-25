@@ -15,5 +15,7 @@ elif goorm_average >= 60:
 elif goorm_average < 60:
     level = "F"
 
+
+# 소수점 100.00 을 나타내기 위해 format을 이용함.
 print("{:.2f}".format(goorm_average), end=" ")
-print(level)    
+print(level)
