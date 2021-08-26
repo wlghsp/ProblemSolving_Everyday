@@ -1,3 +1,10 @@
+"""
+이코테 그리디에서 
+거스름돈 문제와 거의 유사하게 문제 풀이함. 
+
+"""
+
+
 import sys
 
 input = sys.stdin.readline
