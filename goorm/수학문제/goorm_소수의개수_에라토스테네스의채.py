@@ -15,7 +15,7 @@ import math
 
 input = lambda: sys.stdin.readline().rstrip()
 
-
+# 에라토스테네스의 채는 소수 갯수를 구하기에는 좋으나, 소수 판별하는 방법은 아님
 def primenums(n):
     array = [True for _ in range(n + 1)]  # 처음엔 모든 수가 소수(True)인 것으로 초기화(0과 1은 제외)
 
