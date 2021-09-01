@@ -28,10 +28,7 @@ import sys
 
 input = lambda: sys.stdin.readline().rstrip()
 
-baduk = []
-
-for _ in range(19):
-    baduk.append(list(map(int, input().split())))
+baduk = [[map(int, input().split())] for _ in range(19)]
 
 n = int(input())
 
