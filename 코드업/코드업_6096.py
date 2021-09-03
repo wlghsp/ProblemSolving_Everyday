@@ -35,15 +35,15 @@ n = int(input())
 for _ in range(n):
     x, y = map(int, input().split())
     for j in range(19):
-        if baduk[j][y-1] == 0:  # 세로 줄 돌 변경
-            baduk[j][y-1] = 1
+        if baduk[j][y - 1] == 0:  # 세로 줄 돌 변경
+            baduk[j][y - 1] = 1
         else:
-            baduk[j][y-1] = 0
+            baduk[j][y - 1] = 0
 
-        if baduk[x-1][j] == 0:  # 가로 줄 돌 변경
-            baduk[x-1][j] = 1
+        if baduk[x - 1][j] == 0:  # 가로 줄 돌 변경
+            baduk[x - 1][j] = 1
         else:
-            baduk[x-1][j] = 0
+            baduk[x - 1][j] = 0
 
 for row in baduk:
     print(*row)
