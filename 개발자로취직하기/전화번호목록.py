@@ -24,8 +24,6 @@ def solution_sorting(phone_book):
     #     if phone_book[i+1].startswith(phone_book[i]):
     #         return False
 
-    # zip을 확인. 두 리스트의 같은 인덱스끼리 튜플 반환
-    print(list(zip(phone_book, phone_book[1:])))
 
     for p1, p2 in zip(phone_book, phone_book[1:]):
         if p2.startswith(p1):
