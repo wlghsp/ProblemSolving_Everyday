@@ -9,7 +9,7 @@ def bSearch(arr, key):
     lo = 0
     high = len(arr) - 1
 
-    if lo <= high:
+    while lo <= high:
         mid = (lo+high) // 2
         if arr[mid] > key:
             high = mid - 1
