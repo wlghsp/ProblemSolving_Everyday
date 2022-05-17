@@ -18,7 +18,7 @@ for i in range(N):
         for k in range(4):
             nx = i + dx[k]
             ny = j + dy[k]
-            if 0 <= nx < N and 0<= ny < N and board[nx][ny] >= board[i][j]:
+            if 0 <= nx < N and 0 <= ny < N and board[nx][ny] >= board[i][j]:
                 flag = False
                 break
 
