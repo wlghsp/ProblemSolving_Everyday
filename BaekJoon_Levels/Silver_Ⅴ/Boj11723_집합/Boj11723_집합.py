@@ -1,5 +1,4 @@
 
-
 import sys
 
 input = lambda : sys.stdin.readline().rstrip()
@@ -10,22 +9,27 @@ S = set()
 
 for _ in range(M):
     command = input().split()
-    if command[0] == "add":
-        S.add(command[1])
-    elif command[0] == "remove" and command[1] in S:
-        S.remove(command[1])
-    elif command[0] == "check":
-        if command[1] in S:
-            print("1")
+
+    if len(command) == 1:
+        if command[0] == "all":
+            S = set([i for i in range(1, 21)])
         else:
-            print("0")
-    elif command[0] == "toggle":
-        if command[1] in S:
-            S.remove(command[1])
-        else:
-            S.add(command[1])
-    elif command[0] == "all":
-        # S.clear()
-        S = set([i for i in range(1, 21)])
-    elif command[0] == "empty":
-        S.clear()
+            S = set()
+
+
+    else:
+        func, x = command[0], command[1]
+        x = int(x)
+
+        if func == "add":
+            S.add(x)
+        elif func == "remove":
+            S.discard(x) # remove는 요소가 존재하지 않는 set이면 오류 발생, discard는 괜찮음
+        elif func == "check":
+            print(1 if x in S else 0)
+        elif func == "toggle":
+            if x in S:
+                S.discard(x)
+            else:
+                S.add(x)
+
