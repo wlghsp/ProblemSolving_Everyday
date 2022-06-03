@@ -10,11 +10,10 @@ for i in range(len(galho)):
     if galho[i] == '(':
         stk.append(galho[i])
     else:
+        stk.pop()
         if galho[i-1] == '(':
-            stk.pop()
             answer += len(stk)
         else:
-            stk.pop()
             answer += 1
 
 print(answer)
