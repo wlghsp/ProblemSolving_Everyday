@@ -1,11 +1,6 @@
 
-
-
-
 # 그리디 문제
-
 import sys
-
 input = lambda : sys.stdin.readline().rstrip()
 
 
@@ -16,7 +11,7 @@ N, L = map(int, input().split())
 
 
 for i in map(int, input().split()):
-    coord[i] = True;
+    coord[i] = True
 
 ans = 0
 x = 0
