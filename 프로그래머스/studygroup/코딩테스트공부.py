@@ -16,11 +16,16 @@ def solution(alp, cop, problems):
     dp = [[INF] * (max_cop + 1) for _ in range(max_alp + 1)]
     dp[alp][cop] = 0
 
+    """
+    1. 1의 시간을 들여 알고력을 1 얻기
+    2. 1의 시간을 들여 코딩력을 1 얻기
+    3. 풀 수 있는 문제들 중 하나를 풀어 보상으로 알고력과 코딩력을 얻기
+    """
     for i in range(alp, max_alp + 1):
         for j in range(cop, max_cop + 1):
-            if i + 1 <= max_alp: # 도달해야할 알고력보다 작거나 같을 때
+            if i + 1 <= max_alp: # 알고리즘 공부: 도달해야할 알고력보다 작거나 같을 때
                 dp[i + 1][j] = min(dp[i + 1][j], dp[i][j] + 1) #
-            if j + 1 <= max_cop: # 도달해야할 코딩력보다 작거나 같을 때
+            if j + 1 <= max_cop: # 코딩 공부 : 도달해야할 코딩력보다 작거나 같을 때
                 dp[i][j + 1] = min(dp[i][j + 1], dp[i][j] + 1)
 
             # 풀 수 있는 문제 풀어서 알고력, 코딩력을 높인다.
