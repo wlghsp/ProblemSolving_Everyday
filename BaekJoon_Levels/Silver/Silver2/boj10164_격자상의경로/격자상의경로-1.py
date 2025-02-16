@@ -1,44 +1,25 @@
 N, M, K = map(int, input().split())
 
+def count_paths(x1, y1, x2, y2):
+    dp = [[0] * (y2 - y1 + 1) for _ in range(x2 - x1 + 1)]
+    dp[0][0] = 1
+
+    for i in range(x2 - x1 + 1):
+        for j in range(y2 - y1 + 1):
+            if i == 0 and j == 0: continue
+
+            from_top = dp[i - 1][j] if i > 0 else 0
+            from_left = dp[i][j - 1] if j > 0 else 0
+            dp[i][j] = from_top + from_left
+
+    return dp[x2 - x1][y2 - y1]
+
 if K == 0:
-    dp = [[0] * M for _ in range(N)]
-    for i in range(N):  # 위에서 오는 경우
-        dp[i][0] = 1
-    for i in range(M):  # 왼쪽에서 오는 경우
-        dp[0][i] = 1
-    for i in range(1, N):
-        for j in range(1, M):
-            # 위에서 내려 오거나, 왼쪽에서 오거나
-            dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
-    print(dp[N - 1][M - 1])
+    print(count_paths(0, 0, N - 1, M - 1))
 else:
-    board = [[0] * M for _ in range(N)]
-    num = 1
-    n1, m1 = 0, 0
-    for i in range(N):
-        for j in range(M):
-            if num == K:
-                n1, m1 = i, j
-            board[i][j] = num
-            num += 1
-    dp1 = [[0] * (m1 + 1) for _ in range(n1 + 1)]
-    for i in range(n1 + 1): # 위에서 오는 경우
-        dp1[i][0] = 1
-    for i in range(m1 + 1): # 왼쪽에서 오는 경우
-        dp1[0][i] = 1
-    for i in range(1, n1 + 1):
-        for j in range(1, m1 + 1):
-            # 위에서 내려 오거나, 왼쪽에서 오거나
-            dp1[i][j] = dp1[i - 1][j] + dp1[i][j - 1]
+    kx = (K - 1) // M
+    ky = (K - 1) % M
 
-    dp = [[0] * M for _ in range(N)]
-    for i in range(n1, N):  # 위에서 오는 경우
-        dp[i][m1] = 1
-    for i in range(m1, M):  # 왼쪽에서 오는 경우
-        dp[n1][i] = 1
-    for i in range(n1 + 1, N):
-        for j in range(m1 + 1, M):
-            # 위에서 내려 오거나, 왼쪽에서 오거나
-            dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
-
-    print(dp1[n1][m1] * dp[N - 1][M - 1])
+    first_half = count_paths(0, 0, kx, ky)
+    second_half = count_paths(kx, ky, N - 1, M - 1)
+    print(first_half * second_half)
