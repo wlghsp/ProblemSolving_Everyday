@@ -1,5 +1,5 @@
 import sys
-
+sys.setrecursionlimit(10 ** 6)
 input = sys.stdin.readline
 
 n = int(input())
@@ -15,15 +15,14 @@ def dfs(i, color):
     if dp[i][color] != -1:
         return dp[i][color]
 
-        # 현재 집 color에 따라 이전 집 색상 다르게 선택
-    if color == 0:  # 현재 빨강
-        dp[i][color] = cost[i][color] + min(dfs(i - 1, 1), dfs(i - 1, 2))
-    elif color == 1:  # 현재 초록
-        dp[i][color] = cost[i][color] + min(dfs(i - 1, 0), dfs(i - 1, 2))
-    elif color == 2:  # 현재 파랑
-        dp[i][color] = cost[i][color] + min(dfs(i - 1, 0), dfs(i - 1, 1))
+    best = float('inf')
+    for j in range(3):
+        if j != color:
+            best = min(best, dfs(i - 1, j))
 
+    dp[i][color] = best + cost[i][color]
     return dp[i][color]
+
 # 마지막 집을 빨강/초록/파랑
 result = min(dfs(n - 1, 0), dfs(n - 1, 1), dfs(n - 1, 2))
 print(result)
