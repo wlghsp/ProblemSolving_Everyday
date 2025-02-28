@@ -25,10 +25,6 @@ else:
 
     # 거리 구하고 먹을 수 있는 물고기 찾기
     def bfs():
-        if len(fishes) == 1:
-            _, x, y = fishes.popleft()
-            return (abs(cur_x - x) + abs(cur_y - y)), x, y
-
         dist = [[INF] * N for _ in range(N)]
         dist[cur_x][cur_y] = 0
         q = deque([(cur_x, cur_y)])
