@@ -15,18 +15,17 @@ def bfs():
 
         for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
             nx, ny = px + dx, py + dy
-            if nx < 0 or nx >= N or ny < 0 or ny >= M: continue
+            if not (0 <= nx < N and 0 <= ny < M): continue
             if dist[nx][ny] != -1: continue
 
-            if room[nx][ny] == '1' or room[nx][ny] == '#':
-                if room[nx][ny] == '1':
-                    dist[nx][ny] = dist[px][py] + 1
-                    q.append((nx, ny))
-                else:
-                    dist[nx][ny] = dist[px][py] + 1
-                    break
-            elif room[nx][ny] == '0':
+            if room[nx][ny] == '0':
                 dist[nx][ny] = dist[px][py]
                 q.appendleft((nx, ny))
+            else:
+                dist[nx][ny] = dist[px][py] + 1
+                q.append((nx, ny))
+
+            if (nx, ny) == (x2, y2):
+                return dist[nx][ny]
     return dist[x2][y2]
 print(bfs())
