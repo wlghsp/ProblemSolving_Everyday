@@ -1,38 +1,34 @@
-"""
-1. 격자의 바깥으로 나갈 수 없음
-2. (x,y) -> (r,c) 거리 = 총 k
-3. 같은 격자 방문 가능
-4. 문자열 사전순으로 가장 빠른 경로 탈출
+import sys
+sys.setrecursionlimit(10 ** 6)
 
-사람이 예시를 먼저 풀어보자
-
-(x,y)에서 k번 이동 해서 (r,c)에 도달 하는 경우를 모두 담아서
-
-정렬하여 첫번째 출력
-
-4 ^ 2500
-k = 2
-
-ll, lr, lu, ld,
-rr, rl, ru, rd,
-uu, ul, ur, ud,
-dd, dl, dr, du
-
-경우의 수를 계산에 실수했다.
-왜 실수? 어떻게 생각하는게 맞는지?
-
-4 의 2500 승이라서 브루트포스 안됨
-
-1. analogy  비슷한 문제로 비슷한 접근 찾아 오기
-2. bottleneck 찾아 big o 개선 하기
-3. 반복은 dp, 방문 하지 않아도 되는 경우 greedy
-
-"""
 def solution(n, m, x, y, r, c, k):
-    answer = ''
+    answer = 'impossible'
+    min_dist = abs(x - r) + abs(y - c)
+    # 맨해튼거리에서 k를 뺀 남은거리가 짝수가 아니거나, 거리가 k보다 크면 impossible
+    if (k - min_dist) % 2 != 0 or min_dist > k:
+        return answer
+
+    x, y, r, c = x - 1, y - 1, r - 1, c - 1
+    dir_alpha = "dlru"
+    dir = [(1, 0), (0, -1), (0, 1), (-1, 0)]
+
+    answer = []
+    def dfs(cx, cy, dist):
+        if len(dist) >= k:
+            if (cx, cy) == (r, c):
+                answer.append("".join(dist))
+                return
+            return
+
+        for i in range(4):
+            nx, ny = cx + dir[i][0], cy + dir[i][1]
+            if not (0 <= nx < n and 0 <= ny < m): continue
+
+            if not answer:
+                dfs(nx, ny, dist + [dir_alpha[i]])
+
+    dfs(x, y, [])
+    return answer[0]
 
 
-    return answer
-
-
-print(solution(3, 4, 2, 3, 3, 1, 5)) # "dllrl"
+print(solution(3, 4, 2, 3, 3, 1, 5))  # "dllrl"
