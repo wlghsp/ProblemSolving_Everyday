@@ -23,6 +23,7 @@ def solution(n, m, x, y, r, c, k):
         for i in range(4):
             nx, ny = cx + dir[i][0], cy + dir[i][1]
             if not (0 <= nx < n and 0 <= ny < m): continue
+            if abs(nx - r) + abs(ny - c) > k - (len(dist) + 1): continue
 
             if not answer:
                 dfs(nx, ny, dist + [dir_alpha[i]])
