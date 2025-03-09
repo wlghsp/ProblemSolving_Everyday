@@ -18,6 +18,7 @@ def solve():
         return cnt
 
     def make_clouds(visited):
+        clouds.clear()
         for i in range(N):
             for j in range(N):
                 if visited[i][j]: continue
@@ -27,37 +28,26 @@ def solve():
                 clouds.append((i, j))
 
     def get_nx_ny(cx, cy, d, s):
-        for _ in range(s):
-            cx += dir[d][0]
-            cy += dir[d][1]
-
-            if cx == -1:
-                cx = N - 1
-            if cy == -1:
-                cy = N - 1
-            if cx == N:
-                cx = 0
-            if cy == N:
-                cy = 0
-
-        return cx, cy
+        return (cx + dir[d][0] * s) % N, (cy + dir[d][1] * s) % N
 
     for d, s in moves:
         d = d - 1
         visited = [[False] * N for _ in range(N)]
-        # 1. 구름 사라지고 1 증가
+
+        # 1. 구름 이동 및 비 내리기
+        new_positions = []
         for cx, cy in clouds:
             nx, ny = get_nx_ny(cx, cy, d, s)
             grid[nx][ny] += 1
             visited[nx][ny] = True
+            new_positions.append((nx, ny))
 
         # 2. 대각선 물 바구니 갯수 확인 후 물의 양 증가
-        for cx, cy in clouds:
-            nx, ny = get_nx_ny(cx, cy, d, s)
+        for nx, ny in new_positions:
             grid[nx][ny] += cnt_diagonal_basket(nx, ny)
 
-        clouds.clear()
         make_clouds(visited)
+
     return sum(sum(row) for row in grid)
 
 
