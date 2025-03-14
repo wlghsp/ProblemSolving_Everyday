@@ -1,50 +1,64 @@
+import sys
+
+sys.setrecursionlimit(10 ** 6)
 N, L, R = map(int, input().split())
 population = [list(map(int, input().split())) for _ in range(N)]
 locs = [(a, b) for a in range(N) for b in range(N)]
-loc_dict = {i: (l[0], l[1]) for i, l in zip(range(1, N * N + 1), locs)}
-unions = []
+unions = {}
 can_move = False
-def check_open_close(picked, start):
-    global can_move
-    if len(picked) == 2:
-        # 확인하고 개방하면 인접리스트 처리
-        x, y = loc_dict[picked[0]]
-        r, c = loc_dict[picked[1]]
-        if L <= abs(population[x][y] - population[r][c]) <= R:
-            unions[picked[0]].append(picked[1])
-            unions[picked[1]].append(picked[0])
-            can_move = True
-        return
-    for i in range(start, N * N + 1):
-        if i in picked: continue
+total_population = 0
+union_cnt = 0
+team = []
 
-        check_open_close(picked + [i], i + 1)
+def check_open_close():
+    global can_move
+
+    for r in range(N):
+        for c in range(N):
+            for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                nr, nc = r + dx, c + dy
+                if not (0 <= nr < N and 0 <= nc < N): continue
+
+                if L <= abs(population[r][c] - population[nr][nc]) <= R:
+                    unions[(r, c)].append((nr, nc))
+                    unions[(nr, nc)].append((r, c))
+                    can_move = True
+
+def dfs(x, y):
+    global total_population, union_cnt
+
+    visited[x][y] = True
+    team.append((x, y))
+    union_cnt += 1
+    total_population += population[x][y]
+
+    for nx, ny in unions[(x, y)]:
+        if not visited[nx][ny]:
+            dfs(nx, ny)
 
 days = 0
 while True:
     can_move = False
-    unions = [[] * (N * N + 1)]
+    unions = {(r, c): [] for r in range(N) for c in range(N)}
     # 1. 각 나라간 확인하여 인접리스트 처리
-    check_open_close([], 1)
+    check_open_close()
 
-    if can_move:
-        # 2. 열린 경우 탐색해서 갯수와 인구수 총합 구하고 각 칸을 채운다
-        visited = [False] * (N * N + 1)
-        for i in range(1, N * N + 1):
-            if not visited[i] and len(unions[i]) >= 2:
-                visited[i] = True
-                total, cnt = 0, len(unions[i])
-                for c in unions[i]:
-                    visited[c] = True
-                    x, y = loc_dict[c]
-                    total += population[x][y]
-                each_population = total // cnt
-                for c in unions[i]:
-                    x, y = loc_dict[c]
-                    population[x][y] = each_population
-
-        days += 1
-    else:
+    if not can_move:
         break
+
+    # 2. 열린 경우 탐색해서 갯수와 인구수 총합 구하고 각 칸을 채운다
+    visited = [[False] * N for _ in range(N)]
+    for i in range(N):
+        for j in range(N):
+            if not visited[i][j] and len(unions[(i, j)]) >= 1:
+                total_population, union_cnt = 0, 0
+                team = []
+                dfs(i, j)
+
+                each_population = total_population // union_cnt
+                for r, c in team:
+                    population[r][c] = each_population
+
+    days += 1
 
 print(days)
