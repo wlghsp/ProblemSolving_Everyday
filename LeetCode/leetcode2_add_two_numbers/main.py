@@ -1,28 +1,11 @@
-# Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 from typing import Optional
 
-def list_to_linkedlist(numbers):
-    dummy = ListNode()
-    current = dummy
-    for num in numbers:
-        current.next = ListNode(num)
-        current = current.next
-    return dummy.next
-
-def linkedlist_to_list(node):
-    result = []
-    while node:
-        result.append(node.val)
-        node = node.next
-    return result
-
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        # 결과를 저장할 연결 리스트의 더미 노드(가짜 노드)를 만든다.
         # 실제 결과는 dummy.next 부터 시작된다.
         dummy = ListNode()
         current = dummy # 현재 위치를 가리키는 포인터, 처음에는 dummy를 가리킴
