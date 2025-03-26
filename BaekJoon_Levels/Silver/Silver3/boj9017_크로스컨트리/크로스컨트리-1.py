@@ -1,30 +1,33 @@
+from collections import defaultdict
+
 T = int(input())
 
 for _ in range(T):
     N = int(input())
     INF = float('inf')
     players = list(map(int, input().split()))
-    max_team_num = max(players)
-    teams = {i: [0, [], INF] for i in range(1, max_team_num + 1)}
+
+    # 팀 선수 기록 딕셔너리
+    team_counts = defaultdict(int)
+    # 팀 점수 기록 딕셔너리
+    team_scores = defaultdict(list)
+
+    # 선수 수 카운트
     for p in players:
-        team = teams[p]
-        team[0] += 1
+        team_counts[p] += 1
+
+    # 스코어 기록
     score = 1
     for p in players:
-        team = teams[p]
-        if team[0] == 6:
-            team[1].append(score)
+        if team_counts[p] == 6:
+            team_scores[p].append(score)
             score += 1
-    result = [(0, 0, 0) for i in range(max_team_num + 1)]
-    for k, v in teams.items():
-        if v[0] == 6:
-            sum_up_to_fourth = sum(v[1][:4])
-            result[int(k)] = (sum_up_to_fourth, v[1][4], k)
-    result = sorted(result)
-    found = False
-    ans = 0
-    for a, b, c in result:
-        if c != 0 and not found:
-            ans = c
-            found = True
-    print(ans)
+
+    result = []
+    for team, score in team_scores.items():
+        # 점수 4명 합, 5번째 선수 점수, 팀 번호
+        result.append((sum(score[:4]), score[4], team))
+    # 정렬
+    result.sort()
+
+    print(result[0][2])
