@@ -3,25 +3,17 @@ from typing import List
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        l, r = 0, 1
-        maxP = 0
-
-        while r < len(prices):
-            if prices[l] < prices[r]:
-                profit = prices[r] - prices[l]
-                maxP = max(maxP, profit)
+        """
+        그리디
+        한번만 사고 팔 수 있음
+        지금가격 - 이전까지의 최소 가격 = 현재 가능한 최대 이익
+        """
+        max_profit = 0
+        min_price = float('inf')
+        for p in prices:
+            if p < min_price:
+                min_price = p
             else:
-                l = r
-            r += 1
-        return maxP
+                max_profit = max(max_profit, p - min_price)
 
-    def maxProfit1(self, prices: List[int]) -> int:
-        ans = 0
-        min_val = prices[0]
-        for price in prices:
-            if price < min_val:
-                min_val = price
-            ans = max(ans, price - min_val)
-
-        return ans
-
+        return max_profit
