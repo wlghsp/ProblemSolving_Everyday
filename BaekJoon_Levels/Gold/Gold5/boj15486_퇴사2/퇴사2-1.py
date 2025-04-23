@@ -1,25 +1,18 @@
 import sys
 
-sys.setrecursionlimit(10 ** 6)
+input = lambda : sys.stdin.readline().rstrip()
+
 N = int(input())
-meetings = [list(map(int, input().split())) for _ in range(N)]
+T = [0] * (N + 1)
+P = [0] * (N + 1)
+for i in range(N):
+    T[i], P[i] = map(int, input().split())
+dp = [0] * (N + 1)
 
-dp = [-1] * (N + 1)
+for i in range(N - 1, -1, -1):
+    if i + T[i] <= N:
+        dp[i] = max(P[i] + dp[i + T[i]], dp[i + 1])
+    else:
+        dp[i] = dp[i + 1]
 
-def dfs(n):
-    if n >= N:
-        return 0
-
-    if dp[n] != -1:
-        return dp[n]
-
-    skip = dfs(n + 1)
-
-    take = 0
-    if n + meetings[n][0] <= N:
-        take = meetings[n][1] + dfs(n + meetings[n][0])
-
-    dp[n] = max(take, skip)
-    return dp[n]
-
-print(dfs(0))
+print(dp[0])
