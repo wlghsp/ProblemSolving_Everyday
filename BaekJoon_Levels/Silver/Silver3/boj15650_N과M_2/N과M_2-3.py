@@ -9,8 +9,6 @@ def recur(picked, start):
 
 
     for i in range(start, N + 1):
-        if i in picked: continue
-
         recur(picked + [i], i + 1)
 
 recur([], 1)
