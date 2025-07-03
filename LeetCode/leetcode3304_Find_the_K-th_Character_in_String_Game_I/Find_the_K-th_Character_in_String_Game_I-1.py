@@ -1,15 +1,12 @@
 class Solution:
     def kthCharacter(self, k: int) -> str:
         def generate(w):
-            result = ""
-            for c in w:
-                result += chr(ord(c) + 1)
-            return result
+            return [chr(ord(c) + 1) for c in w]
 
-        word = "a"
+        word = ["a"] # 문자열보다는 리스트로 성능 개선
         while len(word) < k:
             word += generate(word)
-        print(word)
+
         return word[k - 1]
 
 if __name__ == "__main__":
