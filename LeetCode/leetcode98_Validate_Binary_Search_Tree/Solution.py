@@ -24,7 +24,22 @@ def build_tree(values):
     i = 1 # 다음 값의 인덱스
 
     # 3. 큐가 비거나 값을 다 쓸 때 까지
-    while queu
+    while queue and i < len(values):
+        # 큐에서 노드 하나 꺼내기
+        node = queue.pop(0)
+
+        # 4. 왼쪽 자식 처리
+        if i < len(values) and values[i] is not None:
+            node.left = TreeNode(values[i])
+            queue.append(node.left) # 큐에 추가
+        i += 1
+
+        # 5. 오른쪽 자식 처리
+        if i < len(values) and values[i] is not None:
+            node.right = TreeNode(values[i])
+            queue.append(node.right) # 큐에 추가
+        i += 1
+    return root
 
 if __name__ == "__main__":
     sol = Solution()
