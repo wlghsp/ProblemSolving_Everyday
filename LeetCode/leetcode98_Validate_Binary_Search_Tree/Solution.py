@@ -8,7 +8,21 @@ from typing import Optional
 
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
-        pass
+        def validate(node, min_val, max_val):
+            # 빈 노드는 유효
+            if not node:
+                return True
+
+            # 현재 노드가 범위를 벗어나면 False
+            if node.val <= min_val or node.val >= max_val:
+                return False
+
+            # 왼쪽: 상한을 현재 값으로 제한
+            # 오른쪽: 하한을 현재 값으로 제한
+            return (validate(node.left, min_val, node.val) and validate(node.right, node.val, max_val))
+
+        # 초기 범위: (-무한대, +무한대)
+        return validate(root, float('-inf'), float('inf'))
 
 
 def build_tree(values):
