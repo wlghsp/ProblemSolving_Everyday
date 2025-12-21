@@ -7,7 +7,15 @@ from typing import Optional
 
 
 class Solution:
-    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+    """
+    # 1. 범위 추적
+    핵심 아이디어:
+        - 각 노드는 허용 가능한 값의 범위를 가짐
+        - 왼쪽으로 가면 -> 상한 max(업데이트)
+        - 오른쪽으로 가면 -> 하한 min(업데이트
+    """
+
+    def isValidBST1(self, root: Optional[TreeNode]) -> bool:
         def validate(node, min_val, max_val):
             # 빈 노드는 유효
             if not node:
@@ -23,6 +31,23 @@ class Solution:
 
         # 초기 범위: (-무한대, +무한대)
         return validate(root, float('-inf'), float('inf'))
+
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        values = []
+        def inorder(node):
+            if not node:
+               return True
+
+            inorder(node.left)
+            values.append(node.val)
+            inorder(node.right)
+        inorder(root)
+
+        for i in range(1, len(values)):
+            if values[i - 1] >= values[i]:
+                return False
+
+        return True
 
 
 def build_tree(values):
