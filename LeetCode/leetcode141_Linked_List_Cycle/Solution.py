@@ -1,4 +1,5 @@
 # Definition for singly-linked list.
+from multiprocessing import current_process
 from typing import Optional
 
 
@@ -10,6 +11,28 @@ class ListNode:
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
+        # 해시 테이블 
+        """
+        방문한 노드를 Set에 저장
+        이미 방문한 노드를 다시 만나면 사이클 존재
+        1. 빈 Set `visited` 생성
+        2. 현재 노드부터 시작하여 순회:
+        - 현재 노드가 `visited`에 있으면 → 사이클 존재 → `True`
+        - 현재 노드를 `visited`에 추가
+        - 다음 노드로 이동
+        3. `None`에 도달하면 → 사이클 없음 → `False`
+        """
+        visited = set()
+        current = head
+        while current:
+            if current in visited:
+                return True
+            visited.add(current)
+            current = current.next
+        return False
+
+
+    def hasCycle_floyd(self, head: Optional[ListNode]) -> bool:
         """
         LeetCode 141. Linked List Cycle
 
@@ -19,7 +42,14 @@ class Solution:
         시간복잡도: O(n) - Floyd's Cycle Detection Algorithm 사용
         공간복잡도: O(1) - 추가 공간 사용 없음
         """
-        pass
+        slow = head
+        fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                return True
+        return False
 
 
 # 헬퍼 함수: 사이클이 있는 리스트 생성
