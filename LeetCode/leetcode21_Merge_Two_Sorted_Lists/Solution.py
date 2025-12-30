@@ -10,6 +10,22 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        # 두 리스트 중 작은 값을 선택하고, 그 다음은 재귀에게 맡긴다.
+        if list1 is None:
+           return list2
+        if list2 is None:
+           return list1
+       
+        if list1.val <= list2.val:
+           # 작은 노드 뒤로 나머지를 정렬된 상태로 반환
+           list1.next = self.mergeTw oLists(list1.next, list2)
+           return list1
+        
+        list2.next = self.mergeTwoLists(list1, list2.next)
+        return list2
+       
+    
+    def mergeTwoLists_iterative(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         """
         LeetCode 21. Merge Two Sorted Lists
 
@@ -18,7 +34,22 @@ class Solution:
         시간복잡도: O(n + m) - 두 리스트의 모든 노드를 한 번씩 순회
         공간복잡도: O(1) - 추가 공간 사용 없음 (재귀 풀이는 O(n + m))
         """
-        pass
+        dummy = ListNode()
+        current = dummy 
+
+        # 비교하면서 연결
+        while list1 and list2:
+            if list1.val <= list2.val:
+                current.next = list1
+                list1 = list1.next
+            else:
+                current.next = list2
+                list2 = list2.next
+            current = current.next  # current 포인터를 다음 노드로 이동
+
+        current.next = list1 if list1 else list2
+
+        return dummy.next
 
 
 # 헬퍼 함수: 리스트 생성
