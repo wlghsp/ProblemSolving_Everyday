@@ -18,7 +18,7 @@ class Solution:
        
         if list1.val <= list2.val:
            # 작은 노드 뒤로 나머지를 정렬된 상태로 반환
-           list1.next = self.mergeTw oLists(list1.next, list2)
+           list1.next = self.mergeTwoLists(list1.next, list2)
            return list1
         
         list2.next = self.mergeTwoLists(list1, list2.next)
