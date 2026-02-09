@@ -3,11 +3,36 @@ from typing import List
 
 class Solution:
     def compress(self, chars: List[str]) -> int:
-        pass
+        # write: 결과를 쓸 위치
+        write = 0
+        read = 0
+        # read: 원본을 읽을 위치
+        n = len(chars)
+
+        while read < n:
+            current_char = chars[read]
+            count = 0
+
+            # 같은 문자가 연속 몇 개인지 세기
+            while read < n and chars[read] == current_char:
+                read += 1
+                count += 1
+            
+            # 문자 쓰기
+            chars[write] = current_char
+            write += 1
+
+            # 개수가 2 이상이면 숫자도 쓰기
+            if count > 1:
+                # 숫자를 문자열로 변환 후 한 글자씩 쓰기
+                for digit in str(count):
+                    chars[write] = digit
+                    write += 1
+        return write
 
 
 # Test cases
-if __name__ == "__main__":
+if __name__ == "__main__":          
     solution = Solution()
 
     # Test case 1
