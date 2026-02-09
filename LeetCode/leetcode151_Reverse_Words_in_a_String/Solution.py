@@ -1,6 +1,47 @@
 class Solution:
     def reverseWords(self, s: str) -> str:
-        pass
+        # 문자열을 리스트로 변환 (Python 문자열은 immutable)
+        chars = list(s)
+        
+        # 1. 전체 뒤집기
+        self.reverse(chars, 0, len(chars) - 1)
+        
+        # 2. 각 단어 뒤집기
+        self.reverseEveryWords(chars)
+        
+        # 3. 공백 정리
+        result = self.cleanSpaces(chars)
+        
+        return ''.join(result)
+    
+    def reverse(self, chars, left, right):
+        while left < right:
+            chars[left], chars[right] = chars[right], chars[left]
+            left += 1
+            right -= 1
+            
+    def reverseEveryWords(self, chars):
+        n = len(chars)
+        start = 0
+        for end in range(n + 1):
+            if end == n or chars[end] == ' ':
+                self.reverse(chars, start, end - 1)
+                start = end + 1
+    def cleanSpaces(self, chars):
+        n = len(chars)
+        result = []
+        i = 0
+        while i < n:
+            if chars[i] != ' ':
+                if result:
+                    result.append(' ')
+                while i < n and chars[i] != ' ':
+                    result.append(chars[i])
+                    i += 1
+            else:
+                i += 1
+        
+        return result
 
 
 # Test cases
