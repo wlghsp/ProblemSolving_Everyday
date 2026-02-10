@@ -3,7 +3,15 @@ from typing import List
 
 class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        pass
+        map = dict()
+        for i in range(len(nums)):
+            if nums[i] in map:
+                idx = map[nums[i]]
+                if i - idx <= k:
+                    return True
+            map[nums[i]] = i
+
+        return False
 
 
 # Test cases
