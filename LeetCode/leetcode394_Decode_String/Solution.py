@@ -1,7 +1,24 @@
 class Solution:
     def decodeString(self, s: str) -> str:
-        pass
+        stk = []
+        current_string = ""
+        current_num = 0
+        for c in s:
+            if c == '[':
+                # 1. [ 이면 (이전 숫자, 이전 문자열) 스택 저장 후 초기화
+                stk.append((current_num, current_string))
+                current_string = ""
+                current_num = 0
+            elif c == ']':
+                prev_num, prev_string  = stk.pop()
+                current_string = prev_string + current_string * prev_num
+            else:
+                if c.isdigit():
+                    current_num = current_num * 10 + int(c)
+                else:
+                    current_string += c
 
+        return current_string
 
 # Test cases
 if __name__ == "__main__":
