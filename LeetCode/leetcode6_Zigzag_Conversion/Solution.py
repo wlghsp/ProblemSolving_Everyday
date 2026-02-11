@@ -1,6 +1,15 @@
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
-        pass
+        rows = [""] * numRows
+        current_row = 0
+        direction = 1
+        for i in range(len(s)):
+            rows[current_row] += s[i]
+            if current_row == (len(rows) - 1) or (i > 0 and current_row == 0):
+                direction = -direction
+            if len(rows) > 1:
+                current_row += direction
+        return ''.join(rows)
 
 
 # Test cases
