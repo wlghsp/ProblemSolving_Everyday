@@ -1,7 +1,23 @@
 class Solution:
     def asteroidCollision(self, asteroids: list[int]) -> list[int]:
-        pass
-
+        stk = []
+        for a in asteroids:
+            # 충돌이 계속 발생하는 동안 
+            # 충돌 조건: 왼쪽에 양수, 오른쪽에 음수
+            while stk and stk[-1] > 0 and a < 0:
+            # 새행성이 크면 top 삭제 
+                if stk[-1] < abs(a):
+                    stk.pop()
+            # 둘이 같으면 top 삭제 후 break
+                elif stk[-1] == abs(a):
+                    stk.pop()
+                    break
+             
+                elif stk[-1] > abs(a):
+                    break
+            else:
+                stk.append(a)         
+        return stk
 
 # Test cases
 if __name__ == "__main__":
@@ -26,3 +42,11 @@ if __name__ == "__main__":
     # Test case 5
     result5 = solution.asteroidCollision([1, -2, -2, -2])
     print(f"Test 5: {result5}")  # Expected: [-2, -2, -2]
+
+    # Test case 6
+    result6 = solution.asteroidCollision([-2, -2, 1,-2])
+    print(f"Test 6: {result6}")  # Expected: [-2, -2, -2]
+    
+    # Test case 7
+    result7 = solution.asteroidCollision([-2,2,1,-2])
+    print(f"Test 7: {result7}")  # Expected: [-2]
