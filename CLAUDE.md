@@ -47,6 +47,45 @@ LeetCode/leetcode{번호}_{문제이름}/
 - 풀이 파일: Python
 - 내용이 너무 길어지면 별도 가이드 문서로 분리 (예: 병합정렬_가이드.md)
 
+### DP 패턴 노트 작성 규칙
+- **목적**: LCS/LIS/LPS 같은 반복되는 DP 패턴을 매번 새로 배우지 않도록 템플릿화
+- **폴더 구조**:
+  ```
+  LeetCode/DP_패턴노트/
+  ├── README.md              # DP 패턴 인덱스 (빠른 참조용)
+  ├── 피보나치형_DP.md        # 70. Climbing Stairs 같은 기초
+  ├── LPS_패턴.md            # Longest Palindromic Substring
+  ├── LCS_패턴.md            # Longest Common Subsequence
+  ├── LIS_패턴.md            # Longest Increasing Subsequence
+  └── ...
+  ```
+- **각 패턴 파일 포맷**:
+  ```markdown
+  # 패턴명 (예: LPS - Longest Palindromic Substring)
+
+  ## 핵심 아이디어
+  - 한 줄 요약
+
+  ## 점화식
+  - dp 정의
+  - 점화식
+  - 초기화
+
+  ## 템플릿 코드
+  ```python
+  # 바로 쓸 수 있는 코드
+  ```
+
+  ## 주의사항 / 자주 틀리는 부분
+  - 인덱싱 실수
+  - 초기화 놓치기 쉬운 부분
+
+  ## 관련 문제
+  - LeetCode 5, 516, ...
+  ```
+- **작성 시점**: DP 문제를 [x] 또는 [H]로 풀고 리뷰 후, "패턴 노트 만들어줘" 요청 시 생성
+- **progress.md 연동**: progress.md에 패턴 노트 링크 추가하여 복습 때 바로 참조 가능
+
 ## 반복 풀이 규칙
 
 ### 폴더 구조
