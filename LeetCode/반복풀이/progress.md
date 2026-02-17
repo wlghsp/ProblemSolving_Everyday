@@ -13,6 +13,7 @@
 
 | 문제 | 난이도 | 유형 | 1차 풀이 | 복습1 | 복습2 | 복습3 | 상태 |
 |------|--------|------|----------|-------|-------|-------|------|
+| 104. Maximum Depth of Binary Tree | E | Tree/DFS | 2/17[x] | | | | 복습중 |
 | 226. Invert Binary Tree | E | Tree/DFS | 2/17(H) | | | | 복습중 |
 | 543. Diameter of Binary Tree | E | Tree/DFS | 2/17(H) | | | | 복습중 |
 | 572. Subtree of Another Tree | E | Tree/DFS | 2/17(H) | | | | 복습중 |
