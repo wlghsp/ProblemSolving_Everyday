@@ -184,41 +184,6 @@ LeetCode/반복풀이/
 - 규칙 변경은 **별도 대화에서 냉정한 상태일 때만** 수정 가능
 - 문제 풀다가 짜증나서 규칙 바꾸자는 건 받아들이지 않음
 
-## DP 패턴 노트 규칙
-
-- **목적**: LCS/LIS/LPS 같은 반복되는 DP 패턴을 매번 새로 배우지 않도록 템플릿화
-- **폴더 구조**:
-  ```
-  LeetCode/DP_패턴노트/
-  ├── README.md              # DP 패턴 인덱스 (빠른 참조용)
-  ├── 피보나치형_DP.md        # 70. Climbing Stairs 같은 기초
-  ├── LPS_패턴.md            # Longest Palindromic Substring
-  ├── LCS_패턴.md            # Longest Common Subsequence
-  ├── LIS_패턴.md            # Longest Increasing Subsequence
-  └── ...
-  ```
-- **각 패턴 파일 포맷**:
-  ```markdown
-  # 패턴명 (예: LPS - Longest Palindromic Substring)
-
-  ## 핵심 아이디어
-  - 한 줄 요약
-
-  ## 점화식
-  - dp 정의 / 점화식 / 초기화
-
-  ## 템플릿 코드
-  (바로 쓸 수 있는 코드)
-
-  ## 주의사항 / 자주 틀리는 부분
-  - 인덱싱 실수, 초기화 놓치기 쉬운 부분
-
-  ## 관련 문제
-  - LeetCode 5, 516, ...
-  ```
-- **작성 시점**: DP 문제 리뷰 후 "패턴 노트 만들어줘" 요청 시 생성
-- **progress.md 연동**: progress.md에 패턴 노트 링크 추가하여 복습 때 바로 참조 가능
-
 ## 일일일알고 챌린지 (시즌2)
 
 ### 챌린지 정보
