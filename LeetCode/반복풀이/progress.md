@@ -25,7 +25,7 @@
 | 938. Range Sum of BST | E | BST/DFS | 2/16 | | | | 복습중 |
 | 700. Search in a BST | E | BST | 2/16(H) | | | | 복습중 |
 | 827. Making A Large Island | H | BFS/DFS | 2/13(H) | | | | 복습중 |
-| 19. Remove Nth Node From End of List | M | Linked List | 2/14(H) | | | | 복습중 |
+| 19. Remove Nth Node From End of List | M | Linked List | 2/14(H) | 2/18[H] | | | 복습중 |
 | 735. Asteroid Collision | M | Stack | 2/12(H) | | | | 복습중 |
 | 921. Minimum Add to Make Parentheses Valid | M | Stack | 2/11[x] | | | | 복습중 |
 | 2. Add Two Numbers | M | Linked List | 2/11[x] | | | | 복습중 |
@@ -41,7 +41,7 @@
 | 67. Add Binary | E | Math/String | 2/8 | 2/9[H] | 2/11[x] | | 복습중 |
 | 994. Rotting Oranges | M | BFS | 1/11 | 2/14[H] | 2/17[x] | | 복습중 |
 | 242. Valid Anagram | E | Hash Map | 1/11 | 2/13[x] | | | 복습중 |
-| 79. Word Search | M | Backtracking | 1/11 | 2/14[-] | 2/16[x] | | 복습중 |
+| 79. Word Search | M | Backtracking | 1/11 | 2/14[-] | 2/16[x] | 2/18[x] | 복습중 |
 | 5. Longest Palindromic Substring | M | DP | 1/10 | | | | 복습중 |
 | 23. Merge k Sorted Lists | H | Heap | 12/31 | | | | 복습중 |
 | 21. Merge Two Sorted Lists | E | Linked List | 12/30 | 2/13[H] | 2/17[x] | | 복습중 |
@@ -49,5 +49,5 @@
 | 141. Linked List Cycle | E | Linked List | 12/30 | 2/13[H] | 2/17[x] | | 복습중 |
 | 206. Reverse Linked List | E | Linked List | 12/29 | 2/13[H] | 2/17[x] | | 복습중 |
 | 876. Middle of the Linked List | E | Linked List | 12/28 | | | | 복습중 |
-| 100. Same Tree | E | Tree/DFS | 12/28 | 2/15[H] | | | 복습중 |
+| 100. Same Tree | E | Tree/DFS | 12/28 | 2/15[H] | 2/18[H] | | 복습중 |
 | 98. Validate Binary Search Tree | M | BST/DFS | 12/21 | | | | 복습중 |

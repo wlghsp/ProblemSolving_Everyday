@@ -13,11 +13,8 @@ class Solution:
         dummy.next = head
         slow = dummy
         fast = dummy
-        i = 0
-      
-        while i < n:
+        for _ in range(n):
             fast = fast.next
-            i += 1
         while fast and fast.next:
             slow = slow.next
             fast = fast.next
