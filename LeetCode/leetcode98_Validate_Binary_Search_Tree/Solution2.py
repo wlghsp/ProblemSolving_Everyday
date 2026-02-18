@@ -7,9 +7,20 @@ class TreeNode:
 
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
-        pass
-    
-
+        nums = []
+        def inorder(node):
+            if not node:
+                return 
+            inorder(node.left)
+            nums.append(node.val)
+            inorder(node.right)
+        inorder(root)
+        
+        for i in range(1, len(nums)):
+            if nums[i - 1] >= nums[i]:
+                return False
+        
+        return True
 
 if __name__ == "__main__":
     sol = Solution()

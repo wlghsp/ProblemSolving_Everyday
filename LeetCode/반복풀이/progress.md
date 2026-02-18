@@ -50,4 +50,4 @@
 | 206. Reverse Linked List | E | Linked List | 12/29 | 2/13[H] | 2/17[x] | | 복습중 |
 | 876. Middle of the Linked List | E | Linked List | 12/28 | | | | 복습중 |
 | 100. Same Tree | E | Tree/DFS | 12/28 | 2/15[H] | 2/18[H] | | 복습중 |
-| 98. Validate Binary Search Tree | M | BST/DFS | 12/21 | | | | 복습중 |
+| 98. Validate Binary Search Tree | M | BST/DFS | 12/21 | 2/18(H) | | | 복습중 |
