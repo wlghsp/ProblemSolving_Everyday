@@ -37,7 +37,7 @@
 | 6. Zigzag Conversion | M | 시뮬레이션 | 2/11(H) | | | | 복습중 |
 | 219. Contains Duplicate II | E | Hash Map | 2/10(H) | | | | 복습중 |
 | 121. Best Time to Buy and Sell Stock | E | Array | 2/10[x] | | | | 복습중 |
-| 70. Climbing Stairs | E | DP | 2/15[x] | | | | 복습중 |
+| 70. Climbing Stairs | E | DP | 2/15[x] | 2/20[x] | | | 복습중 |
 | 443. String Compression | M | Two Pointer | 2/9 | 2/10[x] | 2/12[x] | | 복습중 |
 | 151. Reverse Words in a String | M | String | 2/9 | 2/10[x] | 2/12[x] | | 복습중 |
 | 122. Best Time to Buy and Sell Stock 2 | M | Greedy | 2/8 | 2/9[x] | 2/11[x] | | 복습중 |
