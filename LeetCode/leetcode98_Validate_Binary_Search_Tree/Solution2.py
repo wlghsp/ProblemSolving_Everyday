@@ -7,20 +7,15 @@ class TreeNode:
 
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
-        nums = []
-        def inorder(node):
+        
+        def validate(node, min_val, max_val):
             if not node:
-                return 
-            inorder(node.left)
-            nums.append(node.val)
-            inorder(node.right)
-        inorder(root)
-        
-        for i in range(1, len(nums)):
-            if nums[i - 1] >= nums[i]:
+                return True
+            if node.val <= min_val or node.val >= max_val:
                 return False
-        
-        return True
+            return validate(node.left, min_val, node.val) and validate(node.right, node.val, max_val)  
+
+        return validate(root, float('-inf'), float('inf'))
 
 if __name__ == "__main__":
     sol = Solution()
