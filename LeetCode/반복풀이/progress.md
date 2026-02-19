@@ -18,7 +18,7 @@
 | 257. Binary Tree Paths | E | Tree/DFS | 2/19[H] | | | | 복습중 |
 | 173. Binary Search Tree Iterator | M | BST/Inorder | 2/19[H] | | | | 복습중 |
 | 104. Maximum Depth of Binary Tree | E | Tree/DFS | 2/17[x] | | | | 복습중 |
-| 226. Invert Binary Tree | E | Tree/DFS | 2/17(H) | | | | 복습중 |
+| 226. Invert Binary Tree | E | Tree/DFS | 2/17(H) | 2/18[H] | | | 복습중 |
 | 543. Diameter of Binary Tree | E | Tree/DFS | 2/17(H) | | | | 복습중 |
 | 572. Subtree of Another Tree | E | Tree/DFS | 2/17(H) | | | | 복습중 |
 | 112. Path Sum | E | Tree/DFS | 2/17(H) | | | | 복습중 |
