@@ -13,6 +13,7 @@
 
 | 문제 | 난이도 | 유형 | 1차 풀이 | 복습1 | 복습2 | 복습3 | 상태 |
 |------|--------|------|----------|-------|-------|-------|------|
+| 257. Binary Tree Paths | E | Tree/DFS | 2/19[H] | | | | 복습중 |
 | 173. Binary Search Tree Iterator | M | BST/Inorder | 2/19[H] | | | | 복습중 |
 | 104. Maximum Depth of Binary Tree | E | Tree/DFS | 2/17[x] | | | | 복습중 |
 | 226. Invert Binary Tree | E | Tree/DFS | 2/17(H) | | | | 복습중 |
