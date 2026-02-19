@@ -3,13 +3,28 @@ class ListNode:
         self.val = val
         self.next = next
 
+def to_list(node):
+    result = []
+    while node:
+        result.append(node.val)
+        node = node.next
+    return result
+
+def make_list(vals):
+    dummy = ListNode(0)
+    cur = dummy
+    for v in vals:
+        cur.next = ListNode(v)
+        cur = cur.next
+    return dummy.next
+
 
 class Solution:
     def mergeTwoLists(self, list1: ListNode, list2: ListNode) -> ListNode:
         dummy = ListNode()
         current = dummy
+
         while list1 and list2:
-            
             if list1.val < list2.val:
                 current.next = list1
                 list1 = list1.next
@@ -21,44 +36,21 @@ class Solution:
         current.next = list1 if list1 else list2
 
         return dummy.next
+            
 
-def create_linked_list(values):
-    if not values:
-        return None
-    head = ListNode(values[0])
-    current = head
-    for val in values[1:]:
-        current.next = ListNode(val)
-        current = current.next
-    return head
-
-
-def linked_list_to_list(head):
-    result = []
-    current = head
-    while current:
-        result.append(current.val)
-        current = current.next
-    return result
 
 
 if __name__ == "__main__":
     sol = Solution()
 
-    # Test 1: list1 = [1,2,4], list2 = [1,3,4]
-    list1 = create_linked_list([1, 2, 4])
-    list2 = create_linked_list([1, 3, 4])
-    result1 = sol.mergeTwoLists(list1, list2)
-    print(linked_list_to_list(result1))  # Expected: [1,1,2,3,4,4]
+    # Test 1: [1,2,4] + [1,3,4] → [1,1,2,3,4,4]
+    l1 = make_list([1, 2, 4])
+    l2 = make_list([1, 3, 4])
+    print(to_list(sol.mergeTwoLists(l1, l2)))  # [1,1,2,3,4,4]
 
-    # Test 2: list1 = [], list2 = []
-    list1 = create_linked_list([])
-    list2 = create_linked_list([])
-    result2 = sol.mergeTwoLists(list1, list2)
-    print(linked_list_to_list(result2))  # Expected: []
+    # Test 2: [] + [] → []
+    print(to_list(sol.mergeTwoLists(None, None)))  # []
 
-    # Test 3: list1 = [], list2 = [0]
-    list1 = create_linked_list([])
-    list2 = create_linked_list([0])
-    result3 = sol.mergeTwoLists(list1, list2)
-    print(linked_list_to_list(result3))  # Expected: [0]
+    # Test 3: [] + [0] → [0]
+    l3 = make_list([0])
+    print(to_list(sol.mergeTwoLists(None, l3)))  # [0]

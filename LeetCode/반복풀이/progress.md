@@ -13,6 +13,7 @@
 
 | 문제 | 난이도 | 유형 | 1차 풀이 | 복습1 | 복습2 | 복습3 | 상태 |
 |------|--------|------|----------|-------|-------|-------|------|
+| 173. Binary Search Tree Iterator | M | BST/Inorder | 2/19[H] | | | | 복습중 |
 | 104. Maximum Depth of Binary Tree | E | Tree/DFS | 2/17[x] | | | | 복습중 |
 | 226. Invert Binary Tree | E | Tree/DFS | 2/17(H) | | | | 복습중 |
 | 543. Diameter of Binary Tree | E | Tree/DFS | 2/17(H) | | | | 복습중 |
@@ -22,7 +23,7 @@
 | 530. Min Absolute Difference in BST | E | BST/Inorder | 2/16 | | | | 복습중 |
 | 94. Binary Tree Inorder Traversal | E | Tree/DFS | 2/16(H) | | | | 복습중 |
 | 235. LCA of BST | M | BST | 2/16(H) | | | | 복습중 |
-| 938. Range Sum of BST | E | BST/DFS | 2/16 | | | | 복습중 |
+| 938. Range Sum of BST | E | BST/DFS | 2/16 | 2/19[x] | | | 복습중 |
 | 700. Search in a BST | E | BST | 2/16(H) | | | | 복습중 |
 | 827. Making A Large Island | H | BFS/DFS | 2/13(H) | | | | 복습중 |
 | 19. Remove Nth Node From End of List | M | Linked List | 2/14(H) | 2/18[H] | | | 복습중 |
@@ -39,12 +40,12 @@
 | 122. Best Time to Buy and Sell Stock 2 | M | Greedy | 2/8 | 2/9[x] | 2/11[x] | | 복습중 |
 | 15. 3Sum | M | Two Pointer | 2/8 | 2/9[x] | 2/11[x] | | 복습중 |
 | 67. Add Binary | E | Math/String | 2/8 | 2/9[H] | 2/11[x] | | 복습중 |
-| 994. Rotting Oranges | M | BFS | 1/11 | 2/14[H] | 2/17[x] | | 복습중 |
+| 994. Rotting Oranges | M | BFS | 1/11 | 2/14[H] | 2/17[x] | 2/19[x] | 복습중 |
 | 242. Valid Anagram | E | Hash Map | 1/11 | 2/13[x] | | | 복습중 |
 | 79. Word Search | M | Backtracking | 1/11 | 2/14[-] | 2/16[x] | 2/18[x] | 복습중 |
 | 5. Longest Palindromic Substring | M | DP | 1/10 | | | | 복습중 |
 | 23. Merge k Sorted Lists | H | Heap | 12/31 | | | | 복습중 |
-| 21. Merge Two Sorted Lists | E | Linked List | 12/30 | 2/13[H] | 2/17[x] | | 복습중 |
+| 21. Merge Two Sorted Lists | E | Linked List | 12/30 | 2/13[H] | 2/17[x] | 2/19[x] | 복습중 |
 | 83. Remove Duplicates from Sorted List | E | Linked List | 12/30 | | | | 복습중 |
 | 141. Linked List Cycle | E | Linked List | 12/30 | 2/13[H] | 2/17[x] | | 복습중 |
 | 206. Reverse Linked List | E | Linked List | 12/29 | 2/13[H] | 2/17[x] | | 복습중 |
