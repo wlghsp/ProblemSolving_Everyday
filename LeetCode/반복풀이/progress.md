@@ -60,4 +60,6 @@
 | 953. Verifying an Alien Dictionary | E | Hash Map/String | 2/20[x] | | | | 복습중 |
 | 696. Count Binary Substrings | E | String/Grouping | 2/20[H] | | | | 복습중 |
 | 746. Min Cost Climbing Stairs | E | DP | 2/20[H] | | | | 복습중 |
+| 191. Number of 1 Bits | E | Bit | 2/20[x] | | | | 복습중 |
+| 338. Counting Bits | E | DP/Bit | 2/20[H] | | | | 복습중 |
 | 백준 1354. 무한 수열 2 | G5 | 재귀/메모이제이션 | 2/19[H] | | | | 복습중 |
