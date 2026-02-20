@@ -44,7 +44,7 @@
 | 122. Best Time to Buy and Sell Stock 2 | M | Greedy | 2/8 | 2/9[x] | 2/11[x] | | 복습중 |
 | 15. 3Sum | M | Two Pointer | 2/8 | 2/9[x] | 2/11[x] | | 복습중 |
 | 67. Add Binary | E | Math/String | 2/8 | 2/9[H] | 2/11[x] | | 복습중 |
-| 994. Rotting Oranges | M | BFS | 1/11 | 2/14[H] | 2/17[x] | 2/19[x] | 복습중 |
+| 994. Rotting Oranges | M | BFS | 1/11 | 2/14[H] | 2/17[x] | 2/19[x]+2/20[x] | 졸업 |
 | 242. Valid Anagram | E | Hash Map | 1/11 | 2/13[x] | | | 복습중 |
 | 79. Word Search | M | Backtracking | 1/11 | 2/14[-] | 2/16[x] | 2/18[x] | 복습중 |
 | 5. Longest Palindromic Substring | M | DP | 1/10 | | | | 복습중 |
