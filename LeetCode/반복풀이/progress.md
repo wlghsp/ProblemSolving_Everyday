@@ -30,7 +30,7 @@
 | 938. Range Sum of BST | E | BST/DFS | 2/16 | 2/19[x] | | | 복습중 |
 | 700. Search in a BST | E | BST | 2/16(H) | | | | 복습중 |
 | 827. Making A Large Island | H | BFS/DFS | 2/13(H) | | | | 복습중 |
-| 19. Remove Nth Node From End of List | M | Linked List | 2/14(H) | 2/18[H] | | | 복습중 |
+| 19. Remove Nth Node From End of List | M | Linked List | 2/14(H) | 2/18[H] | 2/20[x] | | 복습중 |
 | 735. Asteroid Collision | M | Stack | 2/12(H) | | | | 복습중 |
 | 921. Minimum Add to Make Parentheses Valid | M | Stack | 2/11[x] | | | | 복습중 |
 | 2. Add Two Numbers | M | Linked List | 2/11[x] | | | | 복습중 |
