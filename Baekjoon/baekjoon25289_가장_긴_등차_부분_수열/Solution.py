@@ -13,7 +13,7 @@ def solve_test(n, a):
     max_diff = 0
     for d in dp:
         if d.values():
-            max_diff = max (max_diff, max(d.values()))
+            max_diff = max(max_diff, max(d.values()))
     return max_diff
 
 if __name__ == "__main__":
