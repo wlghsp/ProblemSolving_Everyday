@@ -6,7 +6,22 @@ class TreeNode:
 
 class Solution:
     def hasPathSum(self, root: TreeNode, targetSum: int) -> bool:
-        pass
+        if not root:
+            return False
+        
+        def dfs(node, targetSum):
+            if node and not node.right and not node.left:
+                return node.val == targetSum
+            left, right = False, False
+            if node.left:
+                left = dfs(node.left, targetSum - node.val)
+            if node.right:
+                right = dfs(node.right, targetSum - node.val)
+            
+            return left or right
+            
+        return dfs(root, targetSum)
+            
 
 if __name__ == "__main__":
     sol = Solution()
