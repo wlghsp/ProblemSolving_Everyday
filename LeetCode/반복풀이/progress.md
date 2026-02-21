@@ -51,10 +51,10 @@
 | 5. Longest Palindromic Substring | M | DP | 1/10 | | | | 복습중 |
 | 23. Merge k Sorted Lists | H | Heap | 12/31 | | | | 복습중 |
 | 21. Merge Two Sorted Lists | E | Linked List | 12/30 | 2/13[H] | 2/17[x] | 2/19[x] | 복습중 |
-| 83. Remove Duplicates from Sorted List | E | Linked List | 12/30 | | | | 복습중 |
+| 83. Remove Duplicates from Sorted List | E | Linked List | 12/30 | 2/21[H] | | | 복습중 |
 | 141. Linked List Cycle | E | Linked List | 12/30 | 2/13[H] | 2/17[x] | | 복습중 |
 | 206. Reverse Linked List | E | Linked List | 12/29 | 2/13[H] | 2/17[x] | | 복습중 |
-| 876. Middle of the Linked List | E | Linked List | 12/28 | | | | 복습중 |
+| 876. Middle of the Linked List | E | Linked List | 12/28 | 2/21[x] | | | 복습중 |
 | 100. Same Tree | E | Tree/DFS | 12/28 | 2/15[H] | 2/18[H] | | 복습중 |
 | 98. Validate Binary Search Tree | M | BST/DFS | 12/21 | 2/18[H] | 2/19[x] | | 복습중 |
 | 953. Verifying an Alien Dictionary | E | Hash Map/String | 2/20[x] | | | | 복습중 |
