@@ -13,6 +13,7 @@
 
 | 문제 | 난이도 | 유형 | 1차 풀이 | 복습1 | 복습2 | 복습3 | 상태 |
 |------|--------|------|----------|-------|-------|-------|------|
+| 987. Vertical Order Traversal | H | Tree/DFS+Sort | 2/22[H] | | | | 복습중 |
 | 25289. 가장 긴 등차 부분 수열 | S | DP/Hash Map | 2/20[H] | | | | 복습중 |
 | 111. Minimum Depth of Binary Tree | E | Tree/DFS | 2/18[H] | | | | 복습중 |
 | 110. Balanced Binary Tree | E | Tree/DFS | 2/18[H] | | | | 복습중 |
