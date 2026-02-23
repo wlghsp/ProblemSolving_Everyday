@@ -13,6 +13,8 @@
 
 | 문제 | 난이도 | 유형 | 1차 풀이 | 복습1 | 복습2 | 복습3 | 상태 |
 |------|--------|------|----------|-------|-------|-------|------|
+| 160. Intersection of Two Linked Lists | E | Linked List | 2/23[x] | | | | 복습중 |
+| 101. Symmetric Tree | E | Tree/DFS | 2/23[x] | | | | 복습중 |
 | 145. Binary Tree Postorder Traversal | E | Tree/DFS | 2/23[x] | | | | 복습중 |
 | 144. Binary Tree Preorder Traversal | E | Tree/DFS | 2/23[H] | | | | 복습중 |
 | 2641. Cousins in Binary Tree II | M | Tree/BFS | 2/22[x] | | | | 복습중 |
