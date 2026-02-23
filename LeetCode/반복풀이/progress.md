@@ -13,6 +13,8 @@
 
 | 문제 | 난이도 | 유형 | 1차 풀이 | 복습1 | 복습2 | 복습3 | 상태 |
 |------|--------|------|----------|-------|-------|-------|------|
+| 145. Binary Tree Postorder Traversal | E | Tree/DFS | 2/23[x] | | | | 복습중 |
+| 144. Binary Tree Preorder Traversal | E | Tree/DFS | 2/23[H] | | | | 복습중 |
 | 2641. Cousins in Binary Tree II | M | Tree/BFS | 2/22[x] | | | | 복습중 |
 | 114. Flatten Binary Tree to Linked List | M | Tree/DFS+LinkedList | 2/23[H] | | | | 복습중 |
 | 987. Vertical Order Traversal | H | Tree/DFS+Sort | 2/22[H] | | | | 복습중 |
