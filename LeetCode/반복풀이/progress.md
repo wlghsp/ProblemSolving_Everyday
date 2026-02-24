@@ -74,3 +74,5 @@
 | 338. Counting Bits | E | DP/Bit | 2/20[H] | | | | 복습중 |
 | 680. Valid Palindrome II | E | Two Pointer | 2/16[H] | | | | 복습중 |
 | 백준 1354. 무한 수열 2 | G5 | 재귀/메모이제이션 | 2/19[H] | | | | 복습중 |
+| 118. Pascal's Triangle | E | Array/DP | 2/24[H] | | | | 복습중 |
+| 119. Pascal's Triangle II | E | Array/DP | 2/24[H] | | | | 복습중 |
