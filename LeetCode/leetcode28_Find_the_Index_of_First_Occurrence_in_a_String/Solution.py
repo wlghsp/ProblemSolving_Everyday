@@ -1,6 +1,10 @@
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
-        pass
+        window = len(needle)
+        for i in range(len(haystack) - window + 1):
+            if haystack[i:i + window] == needle:
+                return i
+        return -1
 
 
 if __name__ == "__main__":
