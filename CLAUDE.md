@@ -22,6 +22,7 @@
 - 연결 리스트 등 필요 시 helper 함수 포함
 - 기존 폴더가 있으면 Solution2.py 등으로 추가
 - 풀이 파일: Python / 힌트는 파일 생성 X, 대화에서만 제공
+- **복습 문제는 반드시 새 파일 생성** (기존 Solution.py 절대 덮어쓰지 않음) → Solution2.py, Solution3.py 순으로
 
 ## 반복 풀이 규칙
 
