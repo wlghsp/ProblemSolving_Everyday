@@ -23,7 +23,5 @@ if __name__ == "__main__":
     root.left.right.right = TreeNode(5)
 
     s = Solution()
-    print(s.lowestCommonAncestor(root, root.left, root.right).val)  # 6
-
-    # Test 2: p=2, q=4 -> 2
-    print(s.lowestCommonAncestor(root, root.left, root.left.right).val)  # 2
+    print(s.lowestCommonAncestor(root, root.left, root.right).val)        # 6
+    print(s.lowestCommonAncestor(root, root.left, root.left.right).val)   # 2
