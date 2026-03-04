@@ -1,3 +1,6 @@
+from collections import deque
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -7,7 +10,23 @@ class TreeNode:
 
 class Solution:
     def countNodes(self, root: TreeNode) -> int:
-        pass
+        if not root:
+            return 0
+        
+        left_h = self._height(root, go_left=True)
+        right_h = self._height(root, go_left=False)
+        # 왼쪽 == 오른쪽이면 포화 이진 트리
+        if left_h == right_h:
+            return (1 << left_h) - 1
+        # 아니면 좌우 서브트리로 재귀
+        return 1 + self.countNodes(root.left) + self.countNodes(root.right)
+    
+    def _height(self, root, go_left):
+        height = 0
+        while root:
+            height += 1
+            root = root.left if go_left else root.right
+        return height
 
 
 if __name__ == "__main__":
