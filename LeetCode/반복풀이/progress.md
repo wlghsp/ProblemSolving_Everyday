@@ -27,7 +27,7 @@
 | 111. Minimum Depth of Binary Tree | E | Tree/DFS | 2/18[H] | | | | 복습중 |
 | 110. Balanced Binary Tree | E | Tree/DFS | 2/18[H] | | | | 복습중 |
 | 199. Binary Tree Right Side View | M | Tree/BFS | 2/20[H] | | | | 복습중 |
-| 257. Binary Tree Paths | E | Tree/DFS | 2/19[H] | | | | 복습중 |
+| 257. Binary Tree Paths | E | Tree/DFS | 2/19[H] | 3/6[H] | | | 복습중 |
 | 173. Binary Search Tree Iterator | M | BST/Inorder | 2/19[H] | | | | 복습중 |
 | 104. Maximum Depth of Binary Tree | E | Tree/DFS | 2/17[x] | | | | 복습중 |
 | 226. Invert Binary Tree | E | Tree/DFS | 2/17(H) | 2/18[H] | 2/23[x] | 3/3[x] | 졸업 |
@@ -69,7 +69,7 @@
 | 98. Validate Binary Search Tree | M | BST/DFS | 12/21 | 2/18[H] | 2/19[x] | | 복습중 |
 | 953. Verifying an Alien Dictionary | E | Hash Map/String | 2/20[x] | | | | 복습중 |
 | 696. Count Binary Substrings | E | String/Grouping | 2/20[H] | | | | 복습중 |
-| 746. Min Cost Climbing Stairs | E | DP | 2/20[H] | | | | 복습중 |
+| 746. Min Cost Climbing Stairs | E | DP | 2/20[H] | 3/6[x] | | | 복습중 |
 | 191. Number of 1 Bits | E | Bit | 2/20[x] | | | | 복습중 |
 | 338. Counting Bits | E | DP/Bit | 2/20[H] | | | | 복습중 |
 | 680. Valid Palindrome II | E | Two Pointer | 2/16[H] | | | | 복습중 |
