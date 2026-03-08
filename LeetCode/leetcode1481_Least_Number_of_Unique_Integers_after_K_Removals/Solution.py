@@ -2,7 +2,15 @@ from typing import List
 
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
-        pass
+        freq = {}
+        for a in arr:
+            freq[a] = freq.get(a, 0) + 1
+        sorted_freq = sorted(freq.items(), key=lambda v : v[1])
+        for key,cnt in sorted_freq:
+            if cnt <= k:
+                k -= cnt
+                del freq[key]
+        return len(freq)
 
 
 if __name__ == "__main__":
