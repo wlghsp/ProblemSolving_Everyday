@@ -10,21 +10,23 @@ class Solution:
     def binaryTreePaths(self, root: TreeNode) -> List[str]:
         result = []
         def makeStr(vals):
-            pass
+            result = ""
+            for i in range(len(vals)):
+                result += str(vals[i])
+                if i != len(vals) - 1:
+                    result += "->"
+            return result
 
         def dfs(node, path):
             path.append(node.val)
             if node and not node.left and not node.right:
-                result.append(path[:])
-                return
-            if node.left:
-                dfs(node.left, path)
-                if path:
-                    path.pop()
-            if node.right:
-                dfs(node.right, path)
-                if path:
-                    path.pop()
+                result.append("->".join(str(v) for v in path[:]))
+            else:
+                if node.left:
+                    dfs(node.left, path)
+                if node.right:
+                    dfs(node.right, path)
+            path.pop()
         dfs(root, [])
         return result
 
