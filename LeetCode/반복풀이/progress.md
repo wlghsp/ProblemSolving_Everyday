@@ -76,6 +76,6 @@
 | 백준 1354. 무한 수열 2 | G5 | 재귀/메모이제이션 | 2/19[H] | | | | 복습중 |
 | 118. Pascal's Triangle | E | Array/DP | 2/24[H] | | | | 복습중 |
 | 119. Pascal's Triangle II | E | Array/DP | 2/24[H] | | | | 복습중 |
-| 232. Implement Queue using Stacks | E | Stack | 2/24[H] | | | | 복습중 |
+| 232. Implement Queue using Stacks | E | Stack | 2/24[H] | 3/13[x] | | | 복습중 |
 | 202. Happy Number | E | Hash Map/Math | 3/3[H] | | | | 복습중 |
 | 222. Count Complete Tree Nodes | M | Tree/Binary Search | 3/3[H] | | | | 복습중 |
