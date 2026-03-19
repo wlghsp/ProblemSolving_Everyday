@@ -9,6 +9,12 @@
 - `복습중`: 아직 졸업 조건 미달
 - `졸업`: 3회 연속 힌트 없이 성공
 
+## 블랙리스트 (풀지 않는 문제)
+
+| 문제 | 이유 |
+|------|------|
+| 222. Count Complete Tree Nodes | 문제 오류 — 풀어봤자 도움 안 됨 |
+
 ## 진행표
 
 | 문제 | 난이도 | 유형 | 1차 풀이 | 복습1 | 복습2 | 복습3 | 상태 |
@@ -78,6 +84,5 @@
 | 119. Pascal's Triangle II | E | Array/DP | 2/24[H] | | | | 복습중 |
 | 232. Implement Queue using Stacks | E | Stack | 2/24[H] | 3/13[x] | | | 복습중 |
 | 202. Happy Number | E | Hash Map/Math | 3/3[H] | 3/19[x] | | | 복습중 |
-| 222. Count Complete Tree Nodes | M | Tree/Binary Search | 3/3[H] | | | | 복습중 |
 | 142. Linked List Cycle II | M | Linked List | 3/19[H] | | | | 복습중 |
 | 287. Find the Duplicate Number | M | Linked List/Floyd | 3/19[H] | | | | 복습중 |
