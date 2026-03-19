@@ -7,8 +7,15 @@ class TreeNode:
 
 class Solution:
     def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
-        pass
+        both_left = p.val < root.val and q.val < root.val
+        both_right = p.val > root.val and q.val > root.val
 
+        if both_left:
+            return self.lowestCommonAncestor(root.left, p, q)
+        if both_right:
+            return self.lowestCommonAncestor(root.right, p, q)
+        
+        return root
 
 if __name__ == "__main__":
     # Test 1: root=[6,2,8,0,4,7,9,null,null,3,5], p=2, q=8 -> 6
