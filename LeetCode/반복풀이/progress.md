@@ -82,9 +82,10 @@
 | 백준 1354. 무한 수열 2 | G5 | 재귀/메모이제이션 | 2/19[H] | | | | 복습중 |
 | 118. Pascal's Triangle | E | Array/DP | 2/24[H] | | | | 복습중 |
 | 119. Pascal's Triangle II | E | Array/DP | 2/24[H] | | | | 복습중 |
-| 232. Implement Queue using Stacks | E | Stack | 2/24[H] | 3/13[x] | | | 복습중 |
+| 232. Implement Queue using Stacks | E | Stack | 2/24[H] | 3/13[x] | 3/23[x] | | 복습중 |
 | 202. Happy Number | E | Hash Map/Math | 3/3[H] | 3/19[x] | | | 복습중 |
-| 142. Linked List Cycle II | M | Linked List | 3/19[H] | | | | 복습중 |
-| 205. Isomorphic Strings | E | Hash Map | 3/20[H] | | | | 복습중 |
+| 142. Linked List Cycle II | M | Linked List | 3/19[H] | 3/23[x] | | | 복습중 |
+| 205. Isomorphic Strings | E | Hash Map | 3/20[H] | 3/23[x] | | | 복습중 |
 | 287. Find the Duplicate Number | M | Linked List/Floyd | 3/19[H] | | | | 복습중 |
 | 105. Construct Binary Tree from Preorder and Inorder | M | Tree/DFS | 3/20[H] | | | | 복습중 |
+| 77. Combinations | M | Backtracking | 3/23[x] | | | | 복습중 |
