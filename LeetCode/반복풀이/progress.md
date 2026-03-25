@@ -89,3 +89,8 @@
 | 287. Find the Duplicate Number | M | Linked List/Floyd | 3/19[H] | | | | 복습중 |
 | 105. Construct Binary Tree from Preorder and Inorder | M | Tree/DFS | 3/20[H] | 3/24[H] | | | 복습중 |
 | 77. Combinations | M | Backtracking | 3/23[x] | | | | 복습중 |
+| 39. Combination Sum | M | Backtracking | 3/25[H] | | | | 복습중 |
+| 46. Permutations | M | Backtracking | 3/25[x] | | | | 복습중 |
+| 78. Subsets | M | Backtracking | 3/25[x] | | | | 복습중 |
+| 90. Subsets II | M | Backtracking | 3/25[x] | | | | 복습중 |
+| 40. Combination Sum II | M | Backtracking | 3/25[H] | | | | 복습중 |
