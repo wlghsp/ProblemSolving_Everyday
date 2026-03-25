@@ -87,5 +87,5 @@
 | 142. Linked List Cycle II | M | Linked List | 3/19[H] | 3/23[x] | | | 복습중 |
 | 205. Isomorphic Strings | E | Hash Map | 3/20[H] | 3/23[x] | | | 복습중 |
 | 287. Find the Duplicate Number | M | Linked List/Floyd | 3/19[H] | | | | 복습중 |
-| 105. Construct Binary Tree from Preorder and Inorder | M | Tree/DFS | 3/20[H] | | | | 복습중 |
+| 105. Construct Binary Tree from Preorder and Inorder | M | Tree/DFS | 3/20[H] | 3/24[H] | | | 복습중 |
 | 77. Combinations | M | Backtracking | 3/23[x] | | | | 복습중 |
