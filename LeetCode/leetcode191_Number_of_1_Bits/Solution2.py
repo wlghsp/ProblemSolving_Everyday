@@ -1,6 +1,10 @@
 class Solution:
     def hammingWeight(self, n: int) -> int:
-        pass
+        res = 0
+        while n:
+            n &= n - 1
+            res += 1
+        return res
 
 
 if __name__ == "__main__":
