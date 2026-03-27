@@ -93,4 +93,5 @@
 | 46. Permutations | M | Backtracking | 3/25[x] | | | | 복습중 |
 | 78. Subsets | M | Backtracking | 3/25[x] | | | | 복습중 |
 | 90. Subsets II | M | Backtracking | 3/25[x] | | | | 복습중 |
-| 40. Combination Sum II | M | Backtracking | 3/25[H] | | | | 복습중 |
+| 40. Combination Sum II | M | Backtracking | 3/26[H] | | | | 복습중 |
+| 47. Permutations II | M | Backtracking | 3/26[H] | | | | 복습중 |
