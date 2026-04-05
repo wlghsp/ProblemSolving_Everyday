@@ -1,6 +1,19 @@
 class Solution:
     def combine(self, n: int, k: int) -> list[list[int]]:
-        pass
+        res = []
+        def dfs(picked, start):
+            if len(picked) == k:
+                res.append(picked[:])
+                return
+            for i in range(start, n - (k - len(picked)) + 2):
+
+                picked.append(i)
+
+                dfs(picked, i + 1)
+
+                picked.pop()
+        dfs([], 1)
+        return res
 
 
 if __name__ == "__main__":
