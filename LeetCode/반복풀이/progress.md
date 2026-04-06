@@ -101,3 +101,4 @@
 | 104. Maximum Depth of Binary Tree | E | Tree/DFS | 3/30[x] | | | | 복습중 |
 | 138. Copy List with Random Pointer | M | Linked List/Hash Map | 3/31[H] | 4/3[H] | | | 복습중 |
 | 380. Insert Delete GetRandom O(1) | M | Hash Map/Array | 4/1[H] | | | | 복습중 |
+| 215. Kth Largest Element in an Array | M | Heap | 4/6[x] | | | | 복습중 |
