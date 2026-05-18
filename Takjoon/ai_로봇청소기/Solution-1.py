@@ -27,7 +27,6 @@ areas = [
 def out_of_grid(nr, nc):
     return not (0 <= nr < N and 0 <= nc < N)
 
-# 이동로직은 코테풀님 코드 참고
 def bfs_closest(sr, sc):
     q = deque()
     visited = set()
@@ -41,22 +40,18 @@ def bfs_closest(sr, sc):
     dusts = []
 
     while q:
-        q_next = deque()
-         # 1. 시작 위치 먼지 확인  
-        while q:
-            depth, r, c = q.popleft()
-            
-            if grid[r][c] > 0: # 시작위치가 먼지
-                dusts.append((r, c))
-            # 시작위치가 먼지가 아닌 경우
-            q_next.append((depth, r, c))
-
         if dusts: # 먼지를 이미 찾아다면 break
-            break        
-        
-        # 2. 시작위치에서 먼지를 못 찾아서 다음 위치로 이동
-        while q_next:
-            depth, r, c = q_next.popleft()
+            break
+                    
+        len_q = len(q)
+
+        for _ in range(len_q):
+            depth, r, c = q.popleft()
+
+            if grid[r][c] > 0: 
+                dusts.append((r, c))
+                continue # 먼지를 찾았으므로 다음 위치 탐색을 중단함
+
             for dr, dc in dir:
                 nr, nc = r + dr, c + dc
                 if out_of_grid(nr, nc): continue
