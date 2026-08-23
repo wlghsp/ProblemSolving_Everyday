@@ -34,7 +34,7 @@
 
 | 트랙 | 최고 Level | 상태 | 비고 |
 |---|---|---|---|
-| Bit Manipulation | Level 6 존재 (`bitmask/`) | 진행 중 | Level 2 `subset_to_indices` 미완 |
+| Bit Manipulation | Level 6 존재 (`bitmask/`) | 진행 중 | Level 1 [x] 완료 (2026-08-23). Level 2 `subset_to_indices` 미완 |
 | Backtracking (순열/조합) | Level 1 (`permutation_combination/`) | 진행 중 | Level 1 `permute`, `permute_count` [x] 완료 (2026-08-23). 다음: Level 2 (조합, combination) |
 | 나머지 | - | 미착수 | - |
 
