@@ -24,7 +24,11 @@ def list_subsets(n: int) -> list[int]:
 def subset_to_indices(mask: int, n: int) -> list[int]:
     # mask가 나타내는 부분집합을 실제 인덱스 리스트로 변환
     # 예: mask=0b101, n=3 -> [0, 2]
-    pass
+    indexes = []
+    for i in range(n):
+        if (mask >> i) & 1:
+            indexes.append(i)
+    return indexes
 
 
 if __name__ == "__main__":

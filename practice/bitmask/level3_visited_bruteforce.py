@@ -9,8 +9,15 @@ LeetCode 78. Subsets 와 동일한 문제를 "비트마스크로 전체 부분�
 def subsets(nums: list[int]) -> list[list[int]]:
     # nums의 모든 부분집합을 반환 (순서 무관)
     # 힌트: mask 하나가 부분집합 하나. mask의 각 비트가 nums의 각 원소를 포함하는지 나타냄.
-    pass
+    res = []
+    for i in range(1 << len(nums)):
+        tmp = []
+        for j in range(len(nums)):
+            if i & 1 << j:
+                tmp.append(nums[j])
+        res.append(tmp)
 
+    return res    
 
 if __name__ == "__main__":
     result = subsets([1, 2, 3])
