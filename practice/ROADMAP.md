@@ -35,7 +35,7 @@
 | 트랙 | 최고 Level | 상태 | 비고 |
 |---|---|---|---|
 | Bit Manipulation | Level 6 존재 (`bitmask/`) | 진행 중 | Level 1, 2, 3 [x] 완료 (2026-08-23). 다음: Level 4 (`conflict_selection`) |
-| Backtracking (순열/조합) | Level 1 (`permutation_combination/`) | 진행 중 | Level 1 `permute`, `permute_count` [x] 완료 (2026-08-23). 다음: Level 2 (조합, combination) |
+| Backtracking (순열/조합) | Level 2 (`permutation_combination/`) | 진행 중 | Level 1 `permute`, `permute_count` [x] 완료 (2026-08-23). Level 2 `combine`, `combine_count` [x] 완료 (2026-08-25). 다음: Level 3 |
 | 나머지 | - | 미착수 | - |
 
 ## 규칙 (CLAUDE.md 연장)
