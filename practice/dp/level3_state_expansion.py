@@ -18,7 +18,29 @@ def max_non_adjacent_sum(nums: list[int]) -> int:
     #      dp[i][1] = i번째를 "선택함" 상태로 i까지 봤을 때 최대합
     # 예: nums=[2,7,9,3,1] -> 12 (2+9+1)
     # 예: nums=[5,1,1,5] -> 10 (5+5)
-    pass
+    n = len(nums)
+    dp = [[0] * 2 for _ in range(n)]
+    dp[0][0] = 0
+    dp[0][1] = nums[0]
+    for i in range(1, n):
+        dp[i][0] = max(dp[i - 1][0], dp[i - 1][1])
+        dp[i][1] = dp[i - 1][0] + nums[i]
+    return max(dp[n - 1][0], dp[n - 1][1])
+
+
+def max_non_adjacent_sum_1d(nums: list[int]) -> int:
+    # max_non_adjacent_sum과 동일한 결과를 반환하되,
+    # dp[i][0]/dp[i][1] 2차원 상태 없이, dp[i] = max(dp[i-1], dp[i-2] + nums[i]) 형태의
+    # 1차원 점화식으로 구현하세요. (2D 상태를 압축해서 유도한 결과)
+    n = len(nums)
+    dp = [0] * n
+    if n == 1:
+        return nums[0]
+    dp[0] = nums[0]
+    dp[1] = max(nums[0], nums[1])
+    for i in range(2, n):
+        dp[i] = max(dp[i - 1], dp[i - 2] + nums[i])
+    return dp[n - 1]
 
 
 if __name__ == "__main__":
@@ -27,5 +49,11 @@ if __name__ == "__main__":
     assert max_non_adjacent_sum([5]) == 5
     assert max_non_adjacent_sum([3, 2]) == 3
     assert max_non_adjacent_sum([1, 2, 3, 1]) == 4
+
+    assert max_non_adjacent_sum_1d([2, 7, 9, 3, 1]) == 12
+    assert max_non_adjacent_sum_1d([5, 1, 1, 5]) == 10
+    assert max_non_adjacent_sum_1d([5]) == 5
+    assert max_non_adjacent_sum_1d([3, 2]) == 3
+    assert max_non_adjacent_sum_1d([1, 2, 3, 1]) == 4
 
     print("Level 3 all tests passed!")
