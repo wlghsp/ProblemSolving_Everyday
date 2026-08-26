@@ -47,7 +47,7 @@
 |---|---|---|---|
 | Bit Manipulation | Level 6 존재 (`bitmask/`) | 진행 중 | Level 1, 2, 3 [x] 완료 (2026-08-23). 다음: Level 4 (`conflict_selection`) 리뷰 진행 중 |
 | Backtracking (순열/조합) | Level 2 (`permutation_combination/`) | 진행 중 | Level 1 `permute`, `permute_count` [x] 완료 (2026-08-23). Level 2 `combine`, `combine_count` [x] 완료 (2026-08-25). 다음: Level 3 |
-| DP | Level 3 (`dp/`) | 진행 중 | Level 1, 2, 3 [x] 완료 (2026-08-26). 다음: Level 4 (INF/불가능 상태). 목표: "피로도 계단" 문제(상태확장+롤링 결합)까지 도달 |
+| DP | Level 4 (`dp/`) | 진행 중 | Level 1, 2, 3, 4 [x] 완료 (2026-08-26). 다음: Level 5 (구간 DP) 또는 바로 Level 6(종합, "피로도 계단" 문제) 도전 가능 |
 | 나머지 | - | 미착수 | - |
 
 ## 규칙 (CLAUDE.md 연장)
