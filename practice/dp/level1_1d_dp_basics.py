@@ -11,7 +11,14 @@ def climb_ways(n: int) -> int:
     # 지면(0번)에서 n번 계단까지 오르는 방법의 수를 반환.
     # 예: n=2 -> 2가지 (1+1, 2)
     # 예: n=4 -> 5가지 (1+1+1+1, 1+1+2, 1+2+1, 2+1+1, 2+2)
-    pass
+    if n <= 3:
+        return n
+    dp = [0] * (n + 1)
+    dp[1] = 1
+    dp[2] = 2
+    for i in range(3, n + 1):
+        dp[i] = dp[i - 1] + dp[i - 2]
+    return dp[n]
 
 
 def min_cost_climb(cost: list[int]) -> int:
@@ -19,7 +26,13 @@ def min_cost_climb(cost: list[int]) -> int:
     # 0번 또는 1번 계단에서 시작해서, 한 번에 1칸 또는 2칸씩 올라
     # len(cost)번째(계단 밖, 도착점)까지 가는 최소 비용을 반환.
     # 예: cost=[10,15,20] -> 15 (1번에서 시작해 2칸 점프로 도착)
-    pass
+    
+    n = len(cost)
+    dp = [0] * (n + 1)
+    dp[1] = 0
+    for i in range(2, n + 1):
+        dp[i] = min(cost[i - 1] + dp[i - 1], cost[i - 2] + dp[i - 2])
+    return dp[n]
 
 
 if __name__ == "__main__":
