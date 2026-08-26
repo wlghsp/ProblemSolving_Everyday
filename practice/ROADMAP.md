@@ -30,12 +30,24 @@
 | 13 | DP (기본 -> 상태 정의) | `dp/` | Backtracking 권장 |
 | 14 | DP over Bitmask (TSP 등 결합) | `bitmask/` (Level 5~6) | DP + Bit Manipulation |
 
+### DP 트랙 세부 Level 목차 (`dp/`)
+
+| Level | 주제 | 핵심 감각 |
+|---|---|---|
+| 1 | 1D DP 기초 (계단 오르기 경우의 수 / 최소비용) | 점화식 `dp[i] = f(dp[i-1], dp[i-2])` 세우기 |
+| 2 | 공간 최적화 (배열 -> 변수 롤링) | O(N) 배열을 O(1) 변수 몇 개로 줄이기 |
+| 3 | 상태 확장 (마지막 행동을 상태에 포함) | `dp[i][state]` 형태로 전이 분기 늘리기 |
+| 4 | INF/불가능 상태 안전하게 다루기 | `float('inf')` 패턴, 덧셈 오염 방지 |
+| 5 | 부분열/구간 DP (LIS류) | O(N^2) 이중 루프 점화식 감각 |
+| 6 | 종합 (상태 확장 + 공간 최적화 결합) | 연속 제약이 있는 상태 DP 스스로 설계 |
+
 ## 상태 표
 
 | 트랙 | 최고 Level | 상태 | 비고 |
 |---|---|---|---|
-| Bit Manipulation | Level 6 존재 (`bitmask/`) | 진행 중 | Level 1, 2, 3 [x] 완료 (2026-08-23). 다음: Level 4 (`conflict_selection`) |
+| Bit Manipulation | Level 6 존재 (`bitmask/`) | 진행 중 | Level 1, 2, 3 [x] 완료 (2026-08-23). 다음: Level 4 (`conflict_selection`) 리뷰 진행 중 |
 | Backtracking (순열/조합) | Level 1 (`permutation_combination/`) | 진행 중 | Level 1 `permute`, `permute_count` [x] 완료 (2026-08-23). 다음: Level 2 (조합, combination) |
+| DP | Level 1 (`dp/`) | 진행 중 | Level 1 `climb_ways`, `min_cost_climb` 미완. 목표: "피로도 계단" 문제(상태확장+롤링 결합)까지 도달 |
 | 나머지 | - | 미착수 | - |
 
 ## 규칙 (CLAUDE.md 연장)
