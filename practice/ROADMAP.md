@@ -46,7 +46,7 @@
 | 트랙 | 최고 Level | 상태 | 비고 |
 |---|---|---|---|
 | Bit Manipulation | Level 6 존재 (`bitmask/`) | 진행 중 | Level 1, 2, 3 [x] 완료 (2026-08-23). 다음: Level 4 (`conflict_selection`) 리뷰 진행 중 |
-| Backtracking (순열/조합) | Level 1 (`permutation_combination/`) | 진행 중 | Level 1 `permute`, `permute_count` [x] 완료 (2026-08-23). 다음: Level 2 (조합, combination) |
+| Backtracking (순열/조합) | Level 2 (`permutation_combination/`) | 진행 중 | Level 1 `permute`, `permute_count` [x] 완료 (2026-08-23). Level 2 `combine`, `combine_count` [x] 완료 (2026-08-25). 다음: Level 3 |
 | DP | Level 1 (`dp/`) | 진행 중 | Level 1 `climb_ways`, `min_cost_climb` 미완. 목표: "피로도 계단" 문제(상태확장+롤링 결합)까지 도달 |
 | 나머지 | - | 미착수 | - |
 
